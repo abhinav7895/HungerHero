@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1s infinite linear;
+}
+
+.spinner {
+  border-radius: 50%; 
+  border: 3px solid rgb(98, 195, 255);
+  border-left: 1px;
+  border-right: 1px;
+  padding: 3px;
+  width: 70px;
+  height: 70px;
+  animation: spinner-rotate 1s linear infinite; 
+}
+
+@keyframes spinner-rotate {
+  from {
+    border-top-color: rgb(248, 115, 49);
+  }
+  to {
+    transform: rotate(360deg); 
+    border-top-color: rgb(237, 164, 128)
+  } 
+}
