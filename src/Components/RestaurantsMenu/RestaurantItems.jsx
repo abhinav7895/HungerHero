@@ -1,4 +1,4 @@
-import MenuCard from "../MenuCard/MenuCard";
+import MenuCard from "./MenuCard";
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 
 const RestaurantItems = (props) => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import RestaurantItems from "../RestaurantItems/RestaurantItems";
-import { Spinner } from "../SpinnerEffect/SpinnerEffect";
+import RestaurantItems from "./RestaurantItems";
+import SpinnerEffect from "../SpinnerEffect/SpinnerEffect";
 import useRestaurantMenu from "../../hooks/useRestaurantMenu";
 import { MdOutlineTimelapse } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
@@ -22,7 +22,7 @@ function RestaurantsMenu() {
 
   const resInfo = useRestaurantMenu(id);
   if (resInfo === null) {
-    return <Spinner/>
+    return <SpinnerEffect/>
   }
   const {
     areaName,

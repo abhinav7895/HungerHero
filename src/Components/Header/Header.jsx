@@ -10,7 +10,6 @@ function Header() {
   const [toggleNav, setToggleNav] = useState(false);
   const { pathname } = useLocation();
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(pathname);
 
   const handleToggle = () => {
     setToggleNav(!toggleNav);

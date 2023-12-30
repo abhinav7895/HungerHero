@@ -1,4 +1,4 @@
-import { IMG_CDN } from "../../constants";
+import { IMG_CDN } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../utils/cartSlice";
 import { useEffect, useState } from "react";

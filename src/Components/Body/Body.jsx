@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import RestaurantCard from "../RestaurantCard/RestaurantCard";
 import Search from "../Search/Search";
-import ShimmerHome from "../Shimmer/Shimmer";
+import Shimmer from "../Shimmer/Shimmer";
 import useOnline from "../../hooks/useOnline";
 import useRestaurantData from "../../hooks/useRestaurantData";
 
@@ -11,7 +11,7 @@ function Body() {
   const isOnline = useOnline();
 
   // shimmer are shown, while data is being fetched
-  if (!restaurants) return <ShimmerHome />;
+  if (!restaurants) return <Shimmer />;
 
   return (
     <>
@@ -30,7 +30,7 @@ function Body() {
       </h2>
 
       {restaurants.length === 0 ? (
-        <ShimmerHome />
+        <Shimmer />
       ) : (
         <div className="mx-auto container my-9">
           <div className="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center my-9 gap-y-16">

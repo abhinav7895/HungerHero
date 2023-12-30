@@ -1,6 +1,6 @@
 import logo from "../../../assets/logo.svg";
 
-export function Spinner() {
+export default function SpinnerEffect() {
 
   return (
     <div className="w-screen h-screen flex justify-center items-center ">

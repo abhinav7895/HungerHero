@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-export default function ShimmerHome() {
+export default function Shimmer() {
   const [shimmer, setShimmer] = useState(true);
 
   useEffect(() => {

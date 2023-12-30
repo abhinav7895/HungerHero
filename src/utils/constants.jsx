@@ -6,15 +6,14 @@ export const SWIGGY_API_URL =
 
 export const RESTAURANT_API_URL = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.8912141&lng=81.0648758&restaurantId=`;
 
-
 export const RESTAURANT_API_URL_LAST =  "&catalog_qa=undefined&submitAction=ENTER"
 
 export const swiggyFaqs = [
     {
-      question: "How do I place an order on Swiggy?",
+      question: "How do I place an order on Hunger Hero ?",
       answer: (
         <>
-          1. Download the Swiggy app or visit the website.
+          1. Download the Hunger Hero website.
           <br />
           2. Browse restaurants and choose your desired items.
           <br />
@@ -27,18 +26,18 @@ export const swiggyFaqs = [
       ),
     },
     {
-      question: "What are the delivery charges on Swiggy?",
+      question: "What are the delivery charges on Hunger Hero ?",
       answer:
-        "Delivery charges on Swiggy vary depending on the restaurant, distance, and order value. You can see the estimated delivery charge before placing your order.",
+        "Delivery charges on Hunger Hero  vary depending on the restaurant, distance, and order value. You can see the estimated delivery charge before placing your order.",
     },
     {
-      question: "What are the payment options available on Swiggy?",
+      question: "What are the payment options available on Hunger Hero ?",
       answer:
-        "Swiggy accepts various payment methods, including cash on delivery, credit/debit cards, UPI, and online wallets.",
+        "Hunger Hero  accepts various payment methods, including cash on delivery, credit/debit cards, UPI, and online wallets.",
     },
     {
-      question: "How can I track my order on Swiggy?",
+      question: "How can I track my order on Hunger Hero ?",
       answer:
-        "You can track your order in real-time through the Swiggy app or website. You will receive notifications about the order's progress.",
+        "You can track your order in real-time through the Hunger Hero website. You will receive notifications about the order's progress.",
     },
   ];

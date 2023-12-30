@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addItem, removeItem, deleteItem } from "../../utils/cartSlice";
-import { IMG_CDN } from "../../constants";
+import { IMG_CDN } from "../../utils/constants";
 
 const CartItems = (props) => {
   const [itemCount, setItemCount] = useState(0);

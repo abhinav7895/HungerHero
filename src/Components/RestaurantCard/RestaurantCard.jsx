@@ -1,10 +1,10 @@
 import React from "react";
-import { IMG_CDN } from "../../constants";
+import { IMG_CDN } from "../../utils/constants";
 import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ data }) => {
   return (
-    <Link to={"/" + data.id}>
+    <Link to={"restaurants/" + data.id}>
       <div className="w-[238px] h-[262px]">
         <img
           className="h-[190px] w-full object-cover rounded-2xl border-2"

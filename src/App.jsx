@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom/client";
-import { Header, Body, Error, RestaurantsMenu, About } from "./Components";
-import FAQs from "./Components/FAQs/FAQs";
-import CartContextProvider from "./context/CartContext";
+import { Header, Body, Error, RestaurantsMenu, About, FAQs } from "./Components";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,7 +9,7 @@ import {
 import "./index.css";
 
 import { Suspense, lazy } from "react";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; 
 import store from "./utils/store";
 
 
@@ -20,12 +19,10 @@ const Cart = lazy(() => import("./Components/Cart/Cart"));
 const App = () => {
   return (
     <>
-      <CartContextProvider>
         <Provider store={store}>
           <Header />
           <Outlet />
         </Provider>
-      </CartContextProvider>
     </>
   );
 };
@@ -68,12 +65,12 @@ const appRouter = createBrowserRouter([
         path: "faqs",
         element: (
           <Suspense>
-            <FAQs />
+            <FAQs /> 
           </Suspense>
         ),
       },
       {
-        path: ":id",
+        path: "restaurants/:id",
         element: <RestaurantsMenu />,
       },
     ],

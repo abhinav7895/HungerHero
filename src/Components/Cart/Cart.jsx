@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CartItems from "../CartItems/CartItems";
-import { Spinner } from "../SpinnerEffect/SpinnerEffect";
+import CartItems from "./CartItems";
+import SpinnerEffect from "../SpinnerEffect/SpinnerEffect";
 import cartIcon from "../../../assets/cart-icon.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../../utils/cartSlice";
@@ -30,7 +30,7 @@ function Cart() {
   return (
     <>
       {isLoading ? (
-        <Spinner />
+        <SpinnerEffect />
       ) : (
         <div className={`p-3 max-w-[800px] ${cartItems.length === 0 ? "" : "min-h-[800px]"} mx-auto sm:px-[40px] relative mt-[90px]`}>
           {cartItems.length === 0 ? (
