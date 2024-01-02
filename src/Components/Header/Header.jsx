@@ -49,7 +49,7 @@ function Header() {
           {['/', '/about', '/contact', '/faqs', '/cart'].map((path) => (
             <li
               key={path}
-              className={`text-2xl text-white px-2 py-1 rounded ${
+              className={`text-2xl text-white px-2 select-none py-1 rounded ${
                 pathname === path
                   ? 'bg-blue-500 hover:bg-blue-600'
                   : 'bg-[#d74112] hover:bg-red-600'
