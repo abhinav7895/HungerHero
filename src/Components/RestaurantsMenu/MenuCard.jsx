@@ -3,12 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../utils/cartSlice";
 import { useEffect, useState } from "react";
 import VEG_IMG from "../../../assets/icons8-veg-48.png";
+import NON_VEG_IMG from "../../../assets/icons8-non-veg-48.png";
 
 const MenuCard = (props) => {
   const { dishData } = props;
   const cartItems = useSelector(store => store.cart.items);
-  const {id, name, price, description, imageId, defaultPrice } =
+  const {id, name, price, description, imageId,itemAttribute, defaultPrice } =
     dishData?.card?.info;
+  const {vegClassifier} = itemAttribute;
+
+
 
   const [itemCount, setItemCount] = useState(0);
 
@@ -40,7 +44,7 @@ const MenuCard = (props) => {
   return (
     <div className="bg-white p-4 shadow-md rounded-md flex md:flex-row justify-between border">
       <div className="">
-        <img src={VEG_IMG} alt="veg-img" className="w-5" />
+        <img src={vegClassifier === "VEG" ? VEG_IMG : NON_VEG_IMG} alt="veg-img" className="w-5" />
         <h3 className="md:text-lg font-semibold text-gray-800">{name}</h3>
         <h4 className="text-m">₹{price / 100 || defaultPrice / 100}</h4>
         <p className="text-sm text-gray-500 ">{description}</p>

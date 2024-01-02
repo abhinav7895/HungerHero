@@ -7,7 +7,7 @@ const CartItems = (props) => {
   const [itemCount, setItemCount] = useState(0);
   const cartItems = useSelector((store) => store.cart.items);
   const item = props.item;
-  const { id, imageId, name, quantity } = item;
+  const { id, imageId, name, price, quantity } = item;
   const dispatch = useDispatch();
 
   const addItemClick = () => {
@@ -52,6 +52,7 @@ const CartItems = (props) => {
         <h2 className="font-semibold text-gray-600">
           Quantity: {quantity}
         </h2>
+        <p className="font-semibold">{`₹${price / 100} x ${quantity} = ₹${(price / 100) * quantity}`}</p>
         <div className="flex flex-col gap-1 items-center">
           <div className="px-2 py-[3px] bg-white rounded-full flex items-center space-x-4 border border-red-500">
             <button onClick={removeItemClick} className="text-sm">
