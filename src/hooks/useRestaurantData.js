@@ -13,7 +13,7 @@ function useRestaurantData() {
                 }
                 const data = await response.json();
                 const restaurantData =
-                    data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(
+                    data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(
                         (restaurant) => {
                             return {
                                 id: restaurant?.info?.id,
